@@ -166,7 +166,7 @@ void ofApp::draw()
 	cam.setPosition(camPosition);
 	cam.setTarget(ofVec3f(0, height / 2, 0));
 
-	if (ofGetFrameNum() > 1) ofSaveScreen("frames/" + ofToString(ofGetFrameNum()) + ".png");
+	// if (ofGetFrameNum() > 1) ofSaveScreen("frames/" + ofToString(ofGetFrameNum()) + ".png");
 }
 
 void ofApp::drawTree()
@@ -182,7 +182,7 @@ void ofApp::drawTree()
 
 	for (float angle = 0; angle < numLaps * 2 * PI; angle += 2 * PI * numLaps / numPoints)
 	{
-		Dot dot;
+		ofPoint dot;
 		float radius = maxRadius - maxRadius * angle / (2 * PI * numLaps);
 		dot.x = radius * cos(angle + anglePhase);
 		dot.y = (angle + anglePhase) * height / (2 * PI * numLaps);

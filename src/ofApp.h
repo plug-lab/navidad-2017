@@ -9,7 +9,7 @@ public:
 	void setup();
 	void draw();
 
-	vector<Dot> dots;
+	vector<ofPoint> dots;
 	ofEasyCam cam;
 	float anglePhase = 0;
 
